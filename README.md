@@ -83,19 +83,18 @@ To the following:
 #dtparam=audio=on
 
 Tell the default bluetooth service to not load the module. To do this, edit /etc/pulse/default.pa and comment out these lines by putting # characters in front of them:
-# .ifexists module-bluetooth-discover.so
-# load-module module-bluetooth-discover
-# .endif
+ #.ifexists module-bluetooth-discover.so
+ #load-module module-bluetooth-discover
+ #.endif
 
 Configure the module to be loaded after X11. To do this, edit /usr/bin/start-pulseaudio-x11 and add two lines:
 
-if [ x"$DISPLAY" != x ] ; then
-  # ...
-
-  # Add these lines:
+  if [ x"$DISPLAY" != x ] ; then
+  ...
+  <Add these lines below>:
   /usr/bin/pactl load-module module-bluetooth-discover
   /usr/bin/pactl load-module module-switch-on-connect
-fi
+  fi
 
 Restart pulseaudio and bluetooth by either rebooting your machine or using the following commands:
 
