@@ -14,7 +14,7 @@ The code allows one to connect to a wireless speaker over bluetooth and stream a
 
 More specifically, code does the following:
 
-1. Connects speaker to Raspberry Pi via a bluetooth
+1. Connects speaker to Raspberry Pi via bluetooth
 2. Finds prayer times based on the specified zip code and country location (using an API call to islamicfinder.us)
 3. Automatically plays Azan followed by Darood-e-Sharif and Dua After Azan five times a day (Fajr, Dhuhr, Asr, Maghrib and Isha)
 4. At sunrise, plays Surah Fatihah followed by Surah Baqrah or Yaseen (randomly chosen each day)
