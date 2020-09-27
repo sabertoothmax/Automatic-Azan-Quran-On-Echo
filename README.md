@@ -4,7 +4,7 @@ This code is a more customizable alternative to an Alexa Skill or Google Home Ap
 
 It is used to play Azan and Quran automatically at the correct times on Amazon Echo, Google Home or other wireless speaker over bluetooth.
 
-This code requires a Raspberry Pi or similar single-board computer to run on. The current implementation is for Raspberry Pi. 
+This code requires a Raspberry Pi or similar single-board computer to run on. The current implementation is tested to work on Raspberry Pi. 
 
 You may also need a bluetooth dongle in case your version of the Pi does not already have a bluetooth module. 
 
