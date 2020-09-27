@@ -22,7 +22,7 @@ More specifically, code does the following:
 6. Every day, an hour before Dhuhr, plays one of Surah Naba or Waqiah (randomly chosen)
 7. Every day, half-an-hour after Maghrib, plays Atay-al-Kursi and one of Surah Mulk or Rahman (randomly chosen)
 8. Every Friday, plays Darood-e-Sharif, Surah Kahf, and one of Surah Ala, Jumuah or Qaf (randomly chosen)
-9. You can control length of each surah by placing shorter duration mp3 files in the directories (using something like https://mp3cut.net/)
+9. You can control length of each surah by placing shorter duration mp3 files in the directories
 10. You can add recitations from multiple artists to the same directory. One of the files will be chosen at random and played each time
 11. Automatically reconnects and continues playing everytime the speaker gets disconnected or the Raspberry Pi runs into issues.
 
