@@ -191,4 +191,4 @@ line 196: Update the country and zip code for which you want to find prayer time
 
 Make the following changes in selectMedia function:
 
-line 176: Update path of the media files. As in, change /media/pi/Data to the full path of the location where the mp3 files are located on your Raspberry Pi.
+line 176: Update path of the media files. As in, change /media/pi/Data to the full path of the location where the mp3 files are located on your Raspberry Pi. You could place it on a USB drive that is plugged in to the Raspberry Pi.
