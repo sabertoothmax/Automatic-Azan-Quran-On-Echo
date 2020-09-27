@@ -8,7 +8,7 @@ This code requires a Raspberry Pi or similar single-board computer to run on. Th
 
 You may also need a bluetooth dongle in case your version of the Pi does not already have a bluetooth module. 
 
-Total cost for hardware is roughly $40 (Echo) + $25 (Pi) = $65. If you buy these on e-Bay you can get it for under $40.
+Total cost for hardware is roughly $65 [$40 for Echo + $25 for Pi]. If you buy these on e-Bay, you may be able to get everything for under $40.
 
 The code allows one to connect to a wireless speaker over bluetooth and stream azan and quran from multiple artists. 
 
