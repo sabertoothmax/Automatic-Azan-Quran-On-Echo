@@ -171,6 +171,8 @@ Step 7: Add media - Azan and Quran files
 
 Go to Youtube, search for azan and quran videos. Convert them to MP3 using something like: https://www.easymp3converter.com/. 
 
+Cut the audio files to the desired recitation duration using something like https://mp3cut.net/
+
 Fix gains of all audio files in directory using something like: http://mp3gain.sourceforge.net/
 
 Adjusting gain will ensure that all files play with same volume level
