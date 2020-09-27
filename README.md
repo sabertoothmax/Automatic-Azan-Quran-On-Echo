@@ -6,7 +6,9 @@ It is used to play Azan and Quran automatically at the correct times on Amazon E
 
 This code requires a Raspberry Pi or similar single-board computer to run on. The current implementation is for Raspberry Pi. 
 
-You may also need a bluetooth dongle in case your version of the Pi does not already have a bluetooth module.
+You may also need a bluetooth dongle in case your version of the Pi does not already have a bluetooth module. 
+
+Total cost for hardware is roughly $40 (Echo) + $25 (Pi) = $65. If you buy these on e-Bay you can get it for under $40.
 
 The code allows one to connect to a wireless speaker over bluetooth and stream azan and quran from multiple artists. 
 
@@ -22,6 +24,10 @@ More specifically, code does the following:
 8. Every Friday, plays Darood-e-Sharif, Surah Kahf, and one of Surah Ala, Jumuah or Qaf (randomly chosen)
 9. You can control length of each surah by placing shorter duration mp3 files in the directories (using something like https://mp3cut.net/)
 10. You can add recitations from multiple artists in the same directory. One of the files will be chosen at random and played each time.
+
+You can customize it further if you feel. Please feel free to contribute. 
+
+This is a needed functionality for many families. If you like this project, please share it widely among your frieds and communities.
 
 Below are set up and running instructions. Run the following commands in a linux terminal:
 
@@ -63,15 +69,15 @@ bluetoothctl
 
 list                  [Note: to see list of your adapters]
 
-select <ADAPTERMAC>   [Note: select default adapter]
+select ADAPTERMAC     [Note: select default adapter]
  
 scan on               [Note: start scanning]
 
-pair <SPEAKERMAC>     [Note: pair with speaker]
+pair SPEAKERMAC       [Note: pair with speaker]
  
-trust <SPEAKERMAC>    [Note: trust speaker]
+trust SPEAKERMAC      [Note: trust speaker]
  
-connect <SPEAKERMAC>  [Note: connect to speaker (this may fail but ignore errors and restart the raspberry pi)]
+connect SPEAKERMAC    [Note: connect to speaker (this may fail but ignore errors and restart the raspberry pi)]
 
 Use blueman GUI or volume control GUI to verify if the bluetooth device is connected nd audio is routed to it correctly.
 
