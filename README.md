@@ -21,7 +21,7 @@ More specifically, code does the following:
 7. Every day, half-an-hour after Maghrib, plays Atay-al-Kursi and one of Surah Mulk or Rahman (randomly chosen)
 8. Every Friday, plays Darood-e-Sharif, Surah Kahf, and one of Surah Ala, Jumuah or Qaf (randomly chosen)
 9. You can control length of each surah by placing shorter duration mp3 files in the directories (using something like https://mp3cut.net/)
-10. You can also add recitations from multiple artists in the same directory. One of the artist files will be chosen at random and played each time
+10. You can add recitations from multiple artists in the same directory. One of the files will be chosen at random and played each time.
 
 Below are set up and running instructions. Run the following commands in a linux terminal:
 
