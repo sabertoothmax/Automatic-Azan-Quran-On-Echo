@@ -4,9 +4,9 @@ This code is a more customizable alternative to an Alexa Skill or Google Home Ap
 
 It is used to play Azan and Quran automatically at the correct times on Amazon Echo, Google Home or other wireless speaker over bluetooth.
 
-This code requires a Raspberry Pi or similar single-board computer to run on. The current implementation is tested to work on Raspberry Pi. 
+This code requires a Raspberry Pi or similar single-board computer (SBC) to run on. The current implementation is tested to work on Raspberry Pi. 
 
-You may also need a bluetooth dongle in case your version of the Pi does not already have a bluetooth module. 
+You may also need dongles for bluetooth and wifi, in case your version of the SBC does not already have these modules. 
 
 Total cost for hardware is roughly $65 [$40 for Echo + $25 for Pi]. If you buy these on e-Bay, you may be able to get everything for under $40.
 
@@ -26,11 +26,11 @@ More specifically, code does the following:
 10. You can add recitations from multiple artists to the same directory. One of the files will be chosen at random and played each time
 11. Automatically reconnects and continues playing everytime the speaker gets disconnected or the Raspberry Pi runs into issues.
 
-You can customize it further if you feel. Please feel free to contribute. 
+You can customize it further if you want. Please feel free to contribute. 
 
 This is a needed functionality for many families. If you like this project, please share it widely among your frieds and communities.
 
-Below are set up and running instructions. Run the following commands in a linux terminal (Notes are added as guidelines):
+Below are set up and running instructions. Run the following commands in a linux terminal (Notes are added as a guideline):
 
 Step 1: Install relevant libraries
 -------------------------------------------------
@@ -62,9 +62,9 @@ Place speaker in discovery mode by:
 
 saying "Alexa turn on bluetooth discovery" or from the App settings
 
-Enter the following commands on terminal (terminal will change to bluetoothctl after the first command):
+Enter the following commands on a terminal (terminal prompt will change to bluetoothctl after the first command):
 
-bluetoothctl 
+bluetoothctl
 
 list                  [Note: to see list of your adapters]
 
@@ -82,7 +82,7 @@ Use blueman GUI or volume control GUI to verify if the bluetooth device is conne
 
 Once connected, go to a different terminal and try
 
-mplayer test.mp3      [Note: run some test file and make sure it is playing through speaker. You need to provide a test.mp3 file]
+mplayer /usr/share/sounds/alsa/Front_Center.wav  [Note: run some test file and make sure it is playing through speaker]
 
 aplay /usr/share/sounds/alsa/Front_Center.wav [Note: Test installation. Front_Center.wav is an existing file; no need to provide a new mp3 file]
 
@@ -94,11 +94,11 @@ Step 5: Configure audio connections
 -------------------------------------------------
 sudo nano /boot/config.txt
 
-Comment out the following line in the config.txt (optional to turn off default audio device) by adding a # before the statement. As in change the following line
+Comment out the following line in config.txt by adding a # before the statement (optional to turn off default audio device). As in, change the following line
 
 dtparam=audio=on
 
-To the following:
+to the following:
 
 #dtparam=audio=on
 
@@ -134,13 +134,13 @@ sudo service bluetooth restart
 
 Go to a different terminal and try
 
-mplayer test.mp3      [Note: run some test file and make sure it is playing through speaker. You need to provide a test.mp3 file]
+mplayer /usr/share/sounds/alsa/Front_Center.wav  [Note: run some test file and make sure it is playing through speaker]
 
 aplay /usr/share/sounds/alsa/Front_Center.wav [Note: Test installation. Front_Center.wav is an existing file; no need to provide a new mp3 file]
 
 Step 6: Set up autorun and auto restarts
 -------------------------------------------------
-To autorun script on raspberrry pi startup make quranMedia.py as an executable by typing the following on a terminal:
+To autorun script on raspberrry pi startup make quranMedia.py to be executable by typing the following on a terminal:
 
 chmod +x quranMedia.py
  
@@ -169,7 +169,7 @@ Below are the example contents of autostart file
 Step 7: Add media - Azan and Quran files
 -------------------------------------------------
 
-Go to Youtube, search for azan and quran videos. Convert them to MP3 using something like: https://www.easymp3converter.com/. 
+Go to Youtube, search for relevant azan and quran videos. Convert them to MP3 using something like: https://www.easymp3converter.com/. 
 
 Cut the audio files to the desired recitation duration using something like https://mp3cut.net/
 
@@ -182,14 +182,14 @@ Put the corrected-mp3 files in corresponding directories at PATH Where PATH is t
 Step 8: Update code quranMedia.py
 -------------------------------------------------
 
-Make the following changes in __main__:
+Make the following changes in main:
 
-line 192: Delay time between different steps. It is set to 3 seconds by default. You can increase it higher in case you run into errors but don't use anything less than 3
+line 192: Delay time between different steps. It is set to 3 seconds by default. You can increase it in case you run into errors but don't use anything less than 3.
 
 line 193: Update the MAC addresses of your speaker devices
 
 line 196: Update the country and zip code for which you want to find prayer times
 
-Make the following changes in selectMedia function:
+Make the following changes in the selectMedia function:
 
 line 176: Update path of the media files. As in, change /media/pi/Data to the full path of the location where the mp3 files are located on your Raspberry Pi. You could place it on a USB drive that is plugged in to the Raspberry Pi.
