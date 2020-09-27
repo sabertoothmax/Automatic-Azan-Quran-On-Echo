@@ -23,7 +23,7 @@ More specifically, code does the following:
 7. Every day, half-an-hour after Maghrib, plays Atay-al-Kursi and one of Surah Mulk or Rahman (randomly chosen)
 8. Every Friday, plays Darood-e-Sharif, Surah Kahf, and one of Surah Ala, Jumuah or Qaf (randomly chosen)
 9. You can control length of each surah by placing shorter duration mp3 files in the directories (using something like https://mp3cut.net/)
-10. You can add recitations from multiple artists in the same directory. One of the files will be chosen at random and played each time
+10. You can add recitations from multiple artists to the same directory. One of the files will be chosen at random and played each time
 11. Automatically reconnects and continues playing everytime the speaker gets disconnected or the Raspberry Pi runs into issues.
 
 You can customize it further if you feel. Please feel free to contribute. 
@@ -34,13 +34,11 @@ Below are set up and running instructions. Run the following commands in a linux
 
 Step 1: Install relevant libraries
 -------------------------------------------------
-sudo pip3 install os subprocess signal time requests random
+sudo pip3 install os subprocess requests random
 
-sudo pip3 install sh datetime
+sudo pip3 install sh datetime signal time
  
-sudo apt install mplayer
-
-sudo apt install alsa-utils
+sudo apt install mplayer alsa-utils
 
 Step 2: Test for sound
 -------------------------------------------------
