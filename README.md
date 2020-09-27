@@ -30,7 +30,7 @@ You can customize it further if you feel. Please feel free to contribute.
 
 This is a needed functionality for many families. If you like this project, please share it widely among your frieds and communities.
 
-Below are set up and running instructions. Run the following commands in a linux terminal:
+Below are set up and running instructions. Run the following commands in a linux terminal (Notes are added as guidelines):
 
 Step 1: Install relevant libraries
 -------------------------------------------------
@@ -76,7 +76,7 @@ pair SPEAKERMAC       [Note: pair with speaker]
  
 trust SPEAKERMAC      [Note: trust speaker]
  
-connect SPEAKERMAC    [Note: connect to speaker (this may fail but ignore errors and restart the raspberry pi)]
+connect SPEAKERMAC    [Note: connect to speake; this may fail but ignore errors and restart the raspberry pi]
 
 Use blueman GUI or volume control GUI to verify if the bluetooth device is connected nd audio is routed to it correctly.
 
