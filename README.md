@@ -2,7 +2,7 @@
 
 This code is an alternative to Alexa Skill or Google Home App. 
 
-It is used to play Azan and Quran automatically on schedule on Amazon Echo, Google Home or other wireless speaker over bluetooth.
+It is used to play Azan and Quran automatically at the correct times on Amazon Echo, Google Home or other wireless speaker over bluetooth.
 
 This code requires a Raspberry Pi or similar single-board computer to run on. The current implementation is for Raspberry Pi. 
 
@@ -13,7 +13,7 @@ The code allows one to connect to a wireless speaker over bluetooth and stream a
 More specifically, code does the following:
 
 1. Connects speaker to Raspberry Pi via a bluetooth
-2. Finds prayer times based on the specified zip code and country location
+2. Finds prayer times based on the specified zip code and country location (using an API call to islamicfinder.us)
 3. Automatically plays Azan followed by Darood-e-Sharif and Dua After Azan five times a day (Fajr, Dhuhr, Asr, Maghrib and Isha)
 4. At sunrise, plays Surah Fatihah followed by Surah Baqrah or Yaseen (randomly chosen each day)
 5. Fajr Azan and Surah's at sunrise are played at slightly lower volume than normal
