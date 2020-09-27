@@ -110,7 +110,7 @@ Tell the default bluetooth service to not load the module. To do this, edit /etc
  
  #.endif
 
-Configure the module to be loaded after X11. To do this, edit /usr/bin/start-pulseaudio-x11 and add two lines:
+Configure the bluetooth module to be loaded after X11. To do this, edit /usr/bin/start-pulseaudio-x11 and add two lines:
 
   if [ x"$DISPLAY" != x ] ; then
   
@@ -124,7 +124,7 @@ Configure the module to be loaded after X11. To do this, edit /usr/bin/start-pul
   
   fi
 
-Restart pulseaudio and bluetooth by either rebooting your machine or using the following commands:
+Restart pulseaudio and bluetooth by either rebooting the Raspberry Pi or using the following commands:
 
 pulseaudio -k
 
