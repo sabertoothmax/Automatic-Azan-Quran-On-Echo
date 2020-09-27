@@ -16,7 +16,7 @@ More specifically, code does the following:
 
 1. Connects speaker to Raspberry Pi via bluetooth
 2. Finds prayer times based on the specified zip code and country location (using an API call to islamicfinder.us)
-3. Automatically plays Azan followed by Darood-e-Sharif and Dua After Azan five times a day (Fajr, Dhuhr, Asr, Maghrib and Isha)
+3. Automatically plays Azan followed by Darood-e-Sharif and Dua After Azan five times a day: Fajr, Dhuhr, Asr, Maghrib and Isha
 4. At sunrise, plays Surah Fatihah followed by Surah Baqrah or Yaseen (randomly chosen each day)
 5. Fajr Azan and Surah's at sunrise are played at slightly lower volume than normal
 6. Every day, an hour before Dhuhr, plays one of Surah Naba or Waqiah (randomly chosen)
