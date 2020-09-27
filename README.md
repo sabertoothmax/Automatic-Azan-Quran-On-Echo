@@ -1,6 +1,6 @@
 # Automatic-Azan-Quran-On-Echo
 
-This code is an alternative to Alexa Skill or Google Home App. 
+This code is a more customizable alternative to an Alexa Skill or Google Home App. 
 
 It is used to play Azan and Quran automatically at the correct times on Amazon Echo, Google Home or other wireless speaker over bluetooth.
 
