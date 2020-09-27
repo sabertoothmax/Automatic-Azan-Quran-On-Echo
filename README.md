@@ -46,7 +46,9 @@ aplay /usr/share/sounds/alsa/Front_Center.wav  [Note: play test sound]
 Step 3: Install pulse audio and bluetooth tools
 -------------------------------------------------
 sudo apt install blueman
+
 sudo apt install pulseaudio
+
 sudo apt install pavucontrol paprefs
 
 Step 4: Connect to speaker over bluetooth
